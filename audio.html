@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporary Showcase</title>
+    <style>
+        /* 重置和基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #121212; /* 深色背景 */
+            font-family: Arial, sans-serif;
+            color: #e0e0e0; /* 浅色文字 */
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .audio-section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #1e1e1e; /* 稍微浅一点的深色背景 */
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3),
+                       0 0 20px rgba(255, 255, 255, 0.05); /* 精致的光晕效果 */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .audio-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4),
+                       0 0 25px rgba(255, 255, 255, 0.07);
+        }
+
+        .audio-label {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #9e9eff; /* 淡紫色标题 */
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* 自定义音频播放器样式 */
+        audio {
+            width: 100%;
+            max-width: 350px;
+            margin-top: 10px;
+            border-radius: 30px;
+            background-color: #2d2d2d;
+        }
+
+        /* 为音频播放器添加自定义样式（仅支持Chrome等现代浏览器） */
+        audio::-webkit-media-controls-panel {
+            background-color: #2d2d2d;
+        }
+
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #e0e0e0;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            .audio-section {
+                margin: 15px 0;
+                padding: 15px;
+            }
+
+            .audio-label {
+                font-size: 16px;
+            }
+
+            audio {
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="audio-section">
+            <div class="audio-label">Amiya Ver</div>
+            <audio controls>
+                <source src="amiya.wav" type="audio/wav">
+                您的浏览器不支持音频播放器。
+            </audio>
+        </div>
+
+        <div class="audio-section">
+            <div class="audio-label">Mizuki Ver</div>
+            <audio controls>
+                <source src="mizuki.wav" type="audio/wav">
+                您的浏览器不支持音频播放器。
+            </audio>
+        </div>
+    </div>
+</body>
+</html>
